@@ -22,7 +22,7 @@ export default function Home() {
                 <Link href="/application">
                   <Button 
                     size="lg" 
-                    className="bg-accent text-dark-gray hover:bg-yellow-500 text-lg font-semibold px-8 py-4 h-auto transform hover:scale-105 transition-all duration-200"
+                    className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-semibold px-8 py-4 h-auto transform hover:scale-105 transition-all duration-200"
                   >
                     <Car className="mr-2 h-5 w-5" />
                     Start Application
