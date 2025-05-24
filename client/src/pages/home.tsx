@@ -182,7 +182,7 @@ export default function Home() {
                   <Smartphone className="h-8 w-8 text-success group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-dark-gray mb-4">Mobile Optimized</h3>
-                <p className="text-medium-gray">Apply from anywhere using your smartphone. Our mobile app is designed for the Kenyan market.</p>
+                <p className="text-medium-gray">Apply from anywhere using your smartphone or computer with our responsive web platform.</p>
               </CardContent>
             </Card>
 
