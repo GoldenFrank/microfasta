@@ -3,27 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: 255 255 255; /* #FFFFFF */
-  --foreground: 30 41 59; /* #1E293B */
-  --muted: 248 250 252; /* #F8FAFC */
-  --muted-foreground: 71 85 105; /* #475569 */
+  --background: 250 251 252; /* #FAFBFC */
+  --foreground: 55 65 81; /* #374151 */
+  --muted: 243 244 246; /* #F3F4F6 */
+  --muted-foreground: 107 114 128; /* #6B7280 */
   --popover: 255 255 255; /* #FFFFFF */
-  --popover-foreground: 30 41 59; /* #1E293B */
+  --popover-foreground: 55 65 81; /* #374151 */
   --card: 255 255 255; /* #FFFFFF */
-  --card-foreground: 30 41 59; /* #1E293B */
-  --border: 226 232 240; /* #E2E8F0 */
-  --input: 241 245 249; /* #F1F5F9 */
-  --primary: 59 130 246; /* #3B82F6 - Balanced blue */
+  --card-foreground: 55 65 81; /* #374151 */
+  --border: 229 231 235; /* #E5E7EB */
+  --input: 249 250 251; /* #F9FAFB */
+  --primary: 79 70 229; /* #4F46E5 - Gentle indigo */
   --primary-foreground: 255 255 255; /* #FFFFFF */
-  --secondary: 16 185 129; /* #10B981 - Professional green */
+  --secondary: 6 120 87; /* #067857 - Calm forest green */
   --secondary-foreground: 255 255 255; /* #FFFFFF */
-  --accent: 245 101 101; /* #F56565 - Softer red-orange */
+  --accent: 217 119 6; /* #D97706 - Warm amber */
   --accent-foreground: 255 255 255; /* #FFFFFF */
-  --destructive: 220 38 38; /* #DC2626 */
+  --destructive: 185 28 28; /* #B91C1C */
   --destructive-foreground: 255 255 255; /* #FFFFFF */
-  --ring: 59 130 246; /* #3B82F6 */
+  --ring: 79 70 229; /* #4F46E5 */
   --radius: 0.5rem;
-  --success: 16 185 129; /* #10B981 */
+  --success: 5 150 105; /* #059669 */
   --success-foreground: 255 255 255; /* #FFFFFF */
 }
 
