@@ -92,18 +92,18 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary to-blue-700 text-white py-12">
+      <div className="bg-white text-gray-900 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-4">
-            <Car className="h-8 w-8 mr-2" />
+            <Car className="h-8 w-8 mr-2 text-gray-700" />
             <h1 className="text-2xl font-bold">MicroFasta</h1>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Fast Logbook Loans in Kenya
           </h2>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-gray-600">
             Get approved in 3 hours with competitive rates from top MFIs
           </p>
         </div>
@@ -276,12 +276,12 @@ export default function Login() {
               <p className="text-sm font-medium">3-Hour Approval</p>
             </div>
             <div className="p-4">
-              <Shield className="h-8 w-8 text-secondary mx-auto mb-2" />
-              <p className="text-sm font-medium">Secure Process</p>
+              <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
+              <p className="text-sm font-medium">Secure</p>
             </div>
             <div className="p-4">
-              <Car className="h-8 w-8 text-accent mx-auto mb-2" />
-              <p className="text-sm font-medium">No Hidden Fees</p>
+              <Car className="h-8 w-8 text-primary mx-auto mb-2" />
+              <p className="text-sm font-medium">Logbook Loans</p>
             </div>
           </div>
         </div>
