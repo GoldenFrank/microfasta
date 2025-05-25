@@ -58,7 +58,7 @@ export default function Dashboard() {
       case "submitted":
         return "bg-blue-100 text-blue-800";
       case "under_review":
-        return "bg-yellow-100 text-yellow-800";
+        return "bg-blue-100 text-blue-800";  // Changed from yellow to blue here
       case "approved":
         return "bg-green-100 text-green-800";
       case "disbursed":
