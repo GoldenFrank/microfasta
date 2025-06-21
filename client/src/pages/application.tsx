@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { getAnalytics } from 'firebase/analytics';
 
-// ✅ Firebase config (your values)
+// ✅ Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCdRCUcczKIy_q5-MICVLAyDqGQinpDv3M",
   authDomain: "webmicrofasta.firebaseapp.com",
@@ -16,12 +15,9 @@ const firebaseConfig = {
   measurementId: "G-K6CCZMTN8Z"
 };
 
-// ✅ Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// ✅ Initialize Firebase safely (avoid re-initializing)
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 const db = getFirestore(app);
-if (typeof window !== 'undefined') {
-  getAnalytics(app);
-}
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
@@ -71,47 +67,19 @@ export default function ApplicationForm() {
       <h2 className="text-2xl font-semibold mb-4">📋 Logbook Loan Application</h2>
 
       <label className="block mb-2">Full Name</label>
-      <input
-        type="text"
-        name="fullName"
-        onChange={handleChange}
-        required
-        className="w-full p-2 mb-4 border rounded"
-      />
+      <input type="text" name="fullName" onChange={handleChange} required className="w-full p-2 mb-4 border rounded" />
 
       <label className="block mb-2">National ID Number</label>
-      <input
-        type="number"
-        name="idNumber"
-        onChange={handleChange}
-        required
-        className="w-full p-2 mb-4 border rounded"
-      />
+      <input type="number" name="idNumber" onChange={handleChange} required className="w-full p-2 mb-4 border rounded" />
 
       <label className="block mb-2">Phone Number</label>
-      <input
-        type="tel"
-        name="phoneNumber"
-        onChange={handleChange}
-        required
-        className="w-full p-2 mb-4 border rounded"
-      />
+      <input type="tel" name="phoneNumber" onChange={handleChange} required className="w-full p-2 mb-4 border rounded" />
 
       <label className="block mb-2">Vehicle Registration Number</label>
-      <input
-        type="text"
-        name="vehicleReg"
-        onChange={handleChange}
-        className="w-full p-2 mb-4 border rounded"
-      />
+      <input type="text" name="vehicleReg" onChange={handleChange} className="w-full p-2 mb-4 border rounded" />
 
       <label className="block mb-2">Select Preferred MFI</label>
-      <select
-        name="selectedMFI"
-        onChange={handleChange}
-        required
-        className="w-full p-2 mb-4 border rounded"
-      >
+      <select name="selectedMFI" onChange={handleChange} required className="w-full p-2 mb-4 border rounded">
         <option value="">-- Choose MFI --</option>
         <option value="Car Credit">Car Credit</option>
         <option value="Platinum Credit">Platinum Credit</option>
@@ -119,18 +87,9 @@ export default function ApplicationForm() {
       </select>
 
       <label className="block mb-2">Reason for the Loan</label>
-      <textarea
-        name="reason"
-        onChange={handleChange}
-        className="w-full p-2 mb-4 border rounded"
-        rows={3}
-      />
+      <textarea name="reason" onChange={handleChange} className="w-full p-2 mb-4 border rounded" rows={3} />
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="bg-blue-600 text-white px-4 py-2 rounded w-full"
-      >
+      <button type="submit" disabled={isSubmitting} className="bg-blue-600 text-white px-4 py-2 rounded w-full">
         {isSubmitting ? 'Submitting...' : 'Submit Application'}
       </button>
     </form>
